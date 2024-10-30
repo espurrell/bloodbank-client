@@ -1,5 +1,9 @@
 package com.keyin.bloodbankclient;
 
+import com.keyin.bloodbankclient.client.BloodBankClient;
+
+import java.util.Scanner;
+
 // BloodBankClientApp.java
 public class BloodBankClientApp {
     public static void main(String[] args) {
