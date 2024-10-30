@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64ada7f6-d939-4fea-8a4f-fd406f184888" name="Changes" comment="Init Commit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/BloodBankClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/BloodBankClientApp.java" afterDir="false" />
+    <list default="true" id="64ada7f6-d939-4fea-8a4f-fd406f184888" name="Changes" comment="Commit Stock.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +91,20 @@
       <option name="project" value="LOCAL" />
       <updated>1730156842511</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit Stock.java">
+      <option name="closed" value="true" />
+      <created>1730320044140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730320044140</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Commit" />
+    <MESSAGE value="Commit Stock.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Stock.java" />
   </component>
 </project>
