@@ -14,7 +14,7 @@ public class BloodBankClientApp {
 
             while(true) {
                 System.out.println("\nSelect an option:");
-                System.out.println("1. Get last hospital to recieve stock");
+                System.out.println("1. Get last hospital to receive stock");
                 System.out.println("2. Get donations by person");
                 System.out.println("3. Get donations by date");
                 System.out.println("4. Get donations by blood type");
@@ -27,7 +27,7 @@ public class BloodBankClientApp {
 
                 switch(choice) {
                     case 1:
-                        System.out.println(client.getLastHospitalToRecieveStock());
+                        System.out.println(client.getLastHospitalToReceiveStock());
                         break;
                     case 2:
                         System.out.print("Enter person ID: ");
