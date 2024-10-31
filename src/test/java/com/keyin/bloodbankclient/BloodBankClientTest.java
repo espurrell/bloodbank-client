@@ -55,7 +55,7 @@ public class BloodBankClientTest {
         when(mockApiClient.getStockByBloodType("O-")).thenReturn(sampleStock);
 
         // Act
-        String result = bloodBankClient.getStockByBloodType("O-");
+        Stock result = bloodBankClient.getStockByBloodType("O-");
 
         // Assert
         assertNotNull(result);

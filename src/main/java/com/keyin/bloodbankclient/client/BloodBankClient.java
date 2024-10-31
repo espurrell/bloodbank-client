@@ -4,6 +4,7 @@ package com.keyin.bloodbankclient.client;
 import java.io.IOException;
 
 import com.keyin.bloodbankclient.model.Person;
+import com.keyin.bloodbankclient.model.Stock;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -57,7 +58,7 @@ public class BloodBankClient implements BloodBankApiClient {
         }
 
     @Override
-    public String getStockByBloodType(String bloodType) throws Exception {
+    public Stock getStockByBloodType(String bloodType) throws Exception {
         return "";
     }
 
