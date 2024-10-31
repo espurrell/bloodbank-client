@@ -1,7 +1,10 @@
 package com.keyin.bloodbankclient;
 
+import com.keyin.bloodbankclient.client.BloodBankApiClient;
+import com.keyin.bloodbankclient.model.Donation;
 import com.keyin.bloodbankclient.model.Person;
 import com.keyin.bloodbankclient.model.Stock;
+import com.keyin.bloodbankclient.client.BloodBankClient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -40,7 +43,7 @@ public class BloodBankClientTest {
         // Assert: Check the result
         assertNotNull(result);
         assertEquals("John Doe", result.getPName());
-        assertEquals("O+", result.getPBloodtype());
+        assertEquals("O+", result.getPBloodType());
         verify(mockApiClient, times(1)).getPersonById(1);
     }
 
@@ -52,11 +55,11 @@ public class BloodBankClientTest {
         when(mockApiClient.getStockByBloodType("O-")).thenReturn(sampleStock);
 
         // Act
-        Stock result = bloodBankClient.getStockByBloodType("O-");
+        String result = bloodBankClient.getStockByBloodType("O-");
 
         // Assert
         assertNotNull(result);
-        assertEquals("O-", result.getSBloodtype());
+        assertEquals("O-", result.getSBloodType());
         assertEquals(10, result.getQuantity());
         verify(mockApiClient, times(1)).getStockByBloodType("O-");
     }

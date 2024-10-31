@@ -10,7 +10,7 @@ public class Person {
     private Date pDob;          // Date of birth
     private String pPhone;      // Contact phone number
     private String pGender;     // Gender
-    private String pBloodtype;  // Blood type (e.g., "A+", "O-")
+    private String pBloodType;  // Blood type (e.g., "A+", "O-")
 
     // No-argument constructor
     public Person() {}
@@ -23,7 +23,7 @@ public class Person {
         this.pDob = pDob;
         this.pPhone = pPhone;
         this.pGender = pGender;
-        this.pBloodtype = pBloodtype;
+        this.pBloodType = pBloodtype;
     }
 
     // Getters and Setters
@@ -75,12 +75,12 @@ public class Person {
         this.pGender = pGender;
     }
 
-    public String getPBloodtype() {
-        return pBloodtype;
+    public String getPBloodType() {
+        return pBloodType;
     }
 
-    public void setPBloodtype(String pBloodtype) {
-        this.pBloodtype = pBloodtype;
+    public void setPBloodType(String pBloodType) {
+        this.pBloodType = pBloodType;
     }
 
     // Optional: Override toString() for easy display of Person data
@@ -93,7 +93,7 @@ public class Person {
                 ", pDob=" + pDob +
                 ", pPhone='" + pPhone + '\'' +
                 ", pGender='" + pGender + '\'' +
-                ", pBloodtype='" + pBloodtype + '\'' +
+                ", pBloodType='" + pBloodType + '\'' +
                 '}';
     }
 }
