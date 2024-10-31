@@ -3,6 +3,7 @@ package com.keyin.bloodbankclient.client;
 
 import java.io.IOException;
 
+import com.keyin.bloodbankclient.model.Donation;
 import com.keyin.bloodbankclient.model.Person;
 import com.keyin.bloodbankclient.model.Stock;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -59,7 +60,7 @@ public class BloodBankClient implements BloodBankApiClient {
 
     @Override
     public Stock getStockByBloodType(String bloodType) throws Exception {
-        return "";
+        return null;
     }
 
     @Override
@@ -70,6 +71,11 @@ public class BloodBankClient implements BloodBankApiClient {
     @Override
     public String getPersonById(String personId) throws Exception {
         return "";
+    }
+
+    @Override
+    public Boolean createDonation(Donation donation) throws Exception {
+        return false;
     }
 
     @Override

@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64ada7f6-d939-4fea-8a4f-fd406f184888" name="Changes" comment="fix apparently">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/keyin/bloodbankclient/BloodBankClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/keyin/bloodbankclient/BloodBankClientTest.java" afterDir="false" />
@@ -50,6 +52,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JUnit.BloodBankClientTest.testGetPersonById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BloodBankClientTest.testGetPersonByIdThrowsException.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
@@ -62,6 +66,70 @@
     ]
   }
 }</component>
+  <component name="RunManager" selected="JUnit.BloodBankClientTest.testGetStockByBloodType">
+    <configuration name="BloodBankClientTest.testGetPersonById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloodbank-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.keyin.bloodbankclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.keyin.bloodbankclient" />
+      <option name="MAIN_CLASS_NAME" value="com.keyin.bloodbankclient.BloodBankClientTest" />
+      <option name="METHOD_NAME" value="testGetPersonById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BloodBankClientTest.testGetPersonByIdThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloodbank-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.keyin.bloodbankclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+      <option name="PACKAGE_NAME" value="com.keyin.bloodbankclient" />
+      <option name="MAIN_CLASS_NAME" value="com.keyin.bloodbankclient.BloodBankClientTest" />
+      <option name="METHOD_NAME" value="testGetPersonByIdThrowsException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BloodBankClientTest.testGetStockByBloodType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloodbank-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.keyin.bloodbankclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.keyin.bloodbankclient" />
+      <option name="MAIN_CLASS_NAME" value="com.keyin.bloodbankclient.BloodBankClientTest" />
+      <option name="METHOD_NAME" value="testGetStockByBloodType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.BloodBankClientTest.testGetStockByBloodType" />
+      <item itemvalue="JUnit.BloodBankClientTest.testGetPersonById" />
+      <item itemvalue="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BloodBankClientTest.testGetStockByBloodType" />
+        <item itemvalue="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException" />
+        <item itemvalue="JUnit.BloodBankClientTest.testGetPersonById" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -151,13 +219,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/keyin/bloodbankclient/BloodBankClientTest.java</url>
-          <line>54</line>
+          <line>53</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/keyin/bloodbankclient/BloodBankClientTest.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

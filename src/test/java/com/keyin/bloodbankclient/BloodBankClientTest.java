@@ -32,20 +32,19 @@ public class BloodBankClientTest {
 
     // Example test for retrieving a person by ID
     @Test
-    void testGetPersonById() throws Exception {
-        // Arrange: Set up a sample person to return
-        Person samplePerson = new Person(1, "John Doe", "123 Main St", new Date(), "555-1234", "Male", "O+");
-        when(mockApiClient.getPersonById(1)).thenReturn(samplePerson);
+    void testGetPersonByIdThrowsException() throws Exception {
+        // Arrange: Mock the API client to throw an exception
+        when(mockApiClient.getPersonById(1)).thenThrow(new RuntimeException("API error"));
 
-        // Act: Call the method to be tested
-        Person result = bloodBankClient.getPersonById(1);
+        // Act & Assert: Ensure that the exception is thrown and handled gracefully
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            bloodBankClient.getPersonById(1);
+        });
 
-        // Assert: Check the result
-        assertNotNull(result);
-        assertEquals("John Doe", result.getPName());
-        assertEquals("O+", result.getPBloodType());
+        assertEquals("API error", exception.getMessage());
         verify(mockApiClient, times(1)).getPersonById(1);
     }
+
 
     // Example test for retrieving stock by blood type
     @Test

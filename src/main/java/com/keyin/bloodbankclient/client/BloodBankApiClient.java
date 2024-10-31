@@ -18,4 +18,5 @@ public interface BloodBankApiClient {
 
     Boolean createDonation(Donation donation) throws Exception;
 
+    String createDonation(String donation) throws Exception;
 }
