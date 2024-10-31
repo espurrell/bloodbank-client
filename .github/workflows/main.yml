@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CI with Maven and Integration Testing
 
 on:
   push:
@@ -9,14 +9,42 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      # Check out the main repository (API or client repo where this file is placed)
       - uses: actions/checkout@v2
+
+      # Set up JDK 11 for both projects
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
           java-version: '11'
-      - name: Build with Maven
+
+      # Build the API with Maven
+      - name: Build API with Maven
         run: mvn -B package --file pom.xml
-      - name: Run tests
-        run: mvn test
+        working-directory: api # adjust if the API code is in a subdirectory
+
+      # Start the API server
+      - name: Start API Server
+        run: |
+          mvn spring-boot:run -Dspring-boot.run.profiles=test &
+          sleep 20 # Wait for server to start
+        working-directory: api
+
+      # Check out the client repository
+      - name: Check out Client Repository
+        uses: actions/checkout@v2
+        with:
+          repository: user/bloodbank-client # Replace with client repo name
+          path: client
+
+      # Build and run client tests
+      - name: Build and Test Client with Maven
+        run: mvn -B test
+        working-directory: client
+
+      # Optionally stop the server after tests
+      - name: Stop API Server
+        run: pkill -f 'mvn spring-boot:run' || true
