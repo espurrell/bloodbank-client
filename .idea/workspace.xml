@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="64ada7f6-d939-4fea-8a4f-fd406f184888" name="Changes" comment="debugging session 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/bloodbankclient/client/BloodBankClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +51,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.BloodBankClientTest.executor": "Run",
     "JUnit.BloodBankClientTest.testGetPersonById.executor": "Run",
     "JUnit.BloodBankClientTest.testGetPersonByIdThrowsException.executor": "Run",
     "JUnit.BloodBankClientTest.testGetStockByBloodType.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   },
   "keyToStringList": {
     "GitStage.ChangesTree.GroupingKeys": [
@@ -63,7 +70,22 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BloodBankClientTest.testGetStockByBloodType">
+  <component name="RunManager" selected="JUnit.BloodBankClientTest">
+    <configuration name="BloodBankClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloodbank-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.keyin.bloodbankclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.keyin.bloodbankclient" />
+      <option name="MAIN_CLASS_NAME" value="com.keyin.bloodbankclient.BloodBankClientTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BloodBankClientTest.testGetPersonById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bloodbank-client" />
       <extension name="coverage">
@@ -115,12 +137,14 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.BloodBankClientTest" />
       <item itemvalue="JUnit.BloodBankClientTest.testGetStockByBloodType" />
       <item itemvalue="JUnit.BloodBankClientTest.testGetPersonById" />
       <item itemvalue="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BloodBankClientTest" />
         <item itemvalue="JUnit.BloodBankClientTest.testGetStockByBloodType" />
         <item itemvalue="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException" />
         <item itemvalue="JUnit.BloodBankClientTest.testGetPersonById" />

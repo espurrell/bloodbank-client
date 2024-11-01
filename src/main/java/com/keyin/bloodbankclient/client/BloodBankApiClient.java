@@ -4,19 +4,17 @@ import com.keyin.bloodbankclient.model.Donation;
 import com.keyin.bloodbankclient.model.Person;
 import com.keyin.bloodbankclient.model.Stock;
 
+import java.io.IOException;
+
 public interface BloodBankApiClient {
-    String getAllDonations() throws Exception;
+    String getAllDonations() throws IOException;
     String getLastHospitalToReceiveStock() throws Exception;
     String getDonationsByPerson(int personId) throws Exception;
     String getDonationsByDate(String date) throws Exception;
-    String getDonationsByBloodType(String pBloodType) throws Exception;
-    String getAvailableStock(String sBloodType) throws Exception;
-    Stock getStockByBloodType(String sBloodType) throws Exception;
+    String getDonationsByBloodType(String bloodType) throws Exception;
+    String getAvailableStock(String bloodType) throws Exception;
+    Stock getStockByBloodType(String bloodType) throws Exception;
     Person getPersonById(int pId) throws Exception;
-
-    String getPersonById(String personId) throws Exception;
-
-    Boolean createDonation(Donation donation) throws Exception;
-
-    String createDonation(String donation) throws Exception;
+    Boolean createDonation(Donation donation) throws IOException;
 }
+

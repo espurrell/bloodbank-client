@@ -2,7 +2,6 @@ package com.keyin.bloodbankclient;
 
 import com.keyin.bloodbankclient.client.BloodBankApiClient;
 import com.keyin.bloodbankclient.model.Donation;
-import com.keyin.bloodbankclient.model.Person;
 import com.keyin.bloodbankclient.model.Stock;
 import com.keyin.bloodbankclient.client.BloodBankClient;
 import org.junit.jupiter.api.BeforeEach;

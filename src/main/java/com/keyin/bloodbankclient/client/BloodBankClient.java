@@ -2,12 +2,15 @@ package com.keyin.bloodbankclient.client;
 
 
 import java.io.IOException;
-
+import com.google.gson.Gson;
 import com.keyin.bloodbankclient.model.Donation;
 import com.keyin.bloodbankclient.model.Person;
 import com.keyin.bloodbankclient.model.Stock;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -69,18 +72,23 @@ public class BloodBankClient implements BloodBankApiClient {
     }
 
     @Override
-    public String getPersonById(String personId) throws Exception {
-        return "";
-    }
+    public Boolean createDonation(Donation donation) throws IOException {
+        HttpPost postRequest = new HttpPost(BASE_URL + "/donations");
+        Gson gson = new Gson();
+        String json = gson.toJson(donation);
 
-    @Override
-    public Boolean createDonation(Donation donation) throws Exception {
-        return false;
-    }
+        postRequest.setEntity(new StringEntity(json));
+        postRequest.setHeader("Content-type", "application/json");
 
-    @Override
-    public String createDonation(String donation) throws Exception {
-        return "";
+        try (CloseableHttpClient client = HttpClients.createDefault();
+             CloseableHttpResponse response = client.execute(postRequest)) {
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode == 201) { // Assuming 201 Created for successful POST
+                return true;
+            } else {
+                throw new ClientProtocolException("Failed: HTTP error code : " + statusCode);
+            }
+        }
     }
 
     // Helper method to send an HTTP GET request and return the response as a string
