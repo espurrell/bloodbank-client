@@ -67,7 +67,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JUnit.BloodBankClientTest">
+  <component name="RunManager" selected="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException">
     <configuration name="BloodBankClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bloodbank-client" />
       <extension name="coverage">
@@ -79,6 +79,22 @@
       <option name="PACKAGE_NAME" value="com.keyin.bloodbankclient" />
       <option name="MAIN_CLASS_NAME" value="com.keyin.bloodbankclient.BloodBankClientTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BloodBankClientTest.testCreateDonation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloodbank-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.keyin.bloodbankclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.keyin.bloodbankclient" />
+      <option name="MAIN_CLASS_NAME" value="com.keyin.bloodbankclient.BloodBankClientTest" />
+      <option name="METHOD_NAME" value="testCreateDonation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,6 +150,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.BloodBankClientTest.testCreateDonation" />
       <item itemvalue="JUnit.BloodBankClientTest" />
       <item itemvalue="JUnit.BloodBankClientTest.testGetStockByBloodType" />
       <item itemvalue="JUnit.BloodBankClientTest.testGetPersonById" />
@@ -141,9 +158,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException" />
+        <item itemvalue="JUnit.BloodBankClientTest.testCreateDonation" />
         <item itemvalue="JUnit.BloodBankClientTest" />
         <item itemvalue="JUnit.BloodBankClientTest.testGetStockByBloodType" />
-        <item itemvalue="JUnit.BloodBankClientTest.testGetPersonByIdThrowsException" />
         <item itemvalue="JUnit.BloodBankClientTest.testGetPersonById" />
       </list>
     </recent_temporary>
