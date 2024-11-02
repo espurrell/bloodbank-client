@@ -33,7 +33,7 @@ public class BloodBankClientApp {
                         System.out.print("Enter person ID: ");
                         int personId = scanner.nextInt();
                         scanner.nextLine();
-                        System.out.println(client.getDonationsByPerson(personId));
+                        System.out.println(client.findDonationsByPersonId(personId));
                         break;
                     case 3:
                         System.out.print("Enter date (yyyy-mm-dd): ");

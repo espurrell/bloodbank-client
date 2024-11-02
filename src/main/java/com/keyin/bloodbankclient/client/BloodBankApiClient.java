@@ -9,7 +9,7 @@ import java.io.IOException;
 public interface BloodBankApiClient {
     String getAllDonations() throws IOException;
     String getLastHospitalToReceiveStock() throws Exception;
-    String getDonationsByPerson(int personId) throws Exception;
+    String findDonationsByPersonId(int personId) throws Exception;
     String getDonationsByDate(String date) throws Exception;
     String getDonationsByBloodType(String bloodType) throws Exception;
     String getAvailableStock(String bloodType) throws Exception;

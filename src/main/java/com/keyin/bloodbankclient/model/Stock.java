@@ -2,25 +2,25 @@ package com.keyin.bloodbankclient.model;
 
 public class Stock {
 
-    private String sBloodType;
+    private String s_bloodtype;
     private int quantity;       // Quantity blood units available for blood type
 
     // No-argument constructor
     public Stock() {}
 
     // Constructor w/ all fields
-    public Stock(String sBloodType, int quantity) {
-        this.sBloodType = sBloodType;
+    public Stock(String s_bloodtype, int quantity) {
+        this.s_bloodtype = s_bloodtype;
         this.quantity = quantity;
     }
 
     // Getters and Setters
     public String getSBloodType() {
-        return sBloodType;
+        return s_bloodtype;
     }
 
-    public void setSBloodType(String sBloodType) {
-        this.sBloodType = sBloodType;
+    public void setSBloodType(String s_bloodtype) {
+        this.s_bloodtype = s_bloodtype;
     }
 
     public int getQuantity() {
@@ -35,7 +35,7 @@ public class Stock {
     @Override
     public String toString() {
         return "Stock{" +
-                "sBloodType='" + sBloodType + '\'' +
+                "s_bloodtype='" + s_bloodtype + '\'' +
                 ", quantity=" + quantity +
                 '}';
     }

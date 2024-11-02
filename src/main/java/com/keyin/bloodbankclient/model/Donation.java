@@ -4,10 +4,10 @@ import java.util.Date;
 
 public class Donation {
 
-    private int dId;           // Donation ID
-    private Date dDate;        // Donation date
-    private String dTime;      // Donation time
-    private int pId;           // Person ID of the donor
+    private int d_id;           // Donation ID
+    private Date d_date;        // Donation date
+    private String d_time;      // Donation time
+    private int p_id;           // Person ID of the donor
     private int quantity;      // Quantity of blood donated
 
     // No-argument constructor
@@ -15,44 +15,44 @@ public class Donation {
 
     // Constructor with all fields
     public Donation(int dId, Date dDate, String dTime, int pId, int quantity) {
-        this.dId = dId;
-        this.dDate = dDate;
-        this.dTime = dTime;
-        this.pId = pId;
+        this.d_id = dId;
+        this.d_date = dDate;
+        this.d_time = dTime;
+        this.p_id = pId;
         this.quantity = quantity;
     }
 
     // Getters and Setters
     public int getDId() {
-        return dId;
+        return d_id;
     }
 
     public void setDId(int dId) {
-        this.dId = dId;
+        this.d_id = dId;
     }
 
     public Date getDDate() {
-        return dDate;
+        return d_date;
     }
 
     public void setDDate(Date dDate) {
-        this.dDate = dDate;
+        this.d_date = dDate;
     }
 
     public String getDTime() {
-        return dTime;
+        return d_time;
     }
 
     public void setDTime(String dTime) {
-        this.dTime = dTime;
+        this.d_time = dTime;
     }
 
     public int getPId() {
-        return pId;
+        return p_id;
     }
 
     public void setPId(int pId) {
-        this.pId = pId;
+        this.p_id = pId;
     }
 
     public int getQuantity() {
@@ -67,10 +67,10 @@ public class Donation {
     @Override
     public String toString() {
         return "Donation{" +
-                "dId=" + dId +
-                ", dDate=" + dDate +
-                ", dTime='" + dTime + '\'' +
-                ", pId=" + pId +
+                "dId=" + d_id +
+                ", dDate=" + d_date +
+                ", dTime='" + d_time + '\'' +
+                ", pId=" + p_id +
                 ", quantity=" + quantity +
                 '}';
     }

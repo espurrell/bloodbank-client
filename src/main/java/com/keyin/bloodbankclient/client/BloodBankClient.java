@@ -39,7 +39,7 @@ public class BloodBankClient implements BloodBankApiClient {
 
         // Retrieves donations by person ID
         @Override
-        public String getDonationsByPerson(int personId) throws Exception {
+        public String findDonationsByPersonId(int personId) throws Exception {
             return sendRequest(BASE_URL + "/donations/person/" + personId);
         }
 

@@ -4,47 +4,47 @@ import java.util.Date;
 
 public class Receive {
 
-    private int rId;           // Unique ID for the receive record
-    private Date rDate;        // Date blood was received
-    private int pId;           // ID of the person receiving the blood
+    private int r_id;           // Unique ID for the receive record
+    private Date r_date;        // Date blood was received
+    private int p_id;           // ID of the person receiving the blood
     private int quantity;      // Quantity of blood units received
-    private String rHospital;  // Hospital name where blood was received
+    private String r_hospital;  // Hospital name where blood was received
 
     // No-argument constructor
     public Receive() {}
 
     // Constructor with all fields
-    public Receive(int rId, Date rDate, int pId, int quantity, String rHospital) {
-        this.rId = rId;
-        this.rDate = rDate;
-        this.pId = pId;
+    public Receive(int r_id, Date r_date, int p_id, int quantity, String r_hospital) {
+        this.r_id = r_id;
+        this.r_date = r_date;
+        this.p_id = p_id;
         this.quantity = quantity;
-        this.rHospital = rHospital;
+        this.r_hospital = r_hospital;
     }
 
     // Getters and Setters
     public int getRId() {
-        return rId;
+        return r_id;
     }
 
-    public void setRId(int rId) {
-        this.rId = rId;
+    public void setRId(int r_id) {
+        this.r_id = r_id;
     }
 
     public Date getRDate() {
-        return rDate;
+        return r_date;
     }
 
-    public void setRDate(Date rDate) {
-        this.rDate = rDate;
+    public void setRDate(Date r_date) {
+        this.r_date = r_date;
     }
 
     public int getPId() {
-        return pId;
+        return p_id;
     }
 
-    public void setPId(int pId) {
-        this.pId = pId;
+    public void setPId(int p_id) {
+        this.p_id = p_id;
     }
 
     public int getQuantity() {
@@ -56,22 +56,22 @@ public class Receive {
     }
 
     public String getRHospital() {
-        return rHospital;
+        return r_hospital;
     }
 
-    public void setRHospital(String rHospital) {
-        this.rHospital = rHospital;
+    public void setRHospital(String r_hospital) {
+        this.r_hospital = r_hospital;
     }
 
     // Optional: Override toString() for easy display of Receive data
     @Override
     public String toString() {
         return "Receive{" +
-                "rId=" + rId +
-                ", rDate=" + rDate +
-                ", pId=" + pId +
+                "r_id=" + r_id +
+                ", r_date=" + r_date +
+                ", p_id=" + p_id +
                 ", quantity=" + quantity +
-                ", rHospital='" + rHospital + '\'' +
+                ", r_hospital='" + r_hospital + '\'' +
                 '}';
     }
 }

@@ -4,96 +4,96 @@ import java.util.Date;
 
 public class Person {
 
-    private int pId;            // Unique ID for the person
-    private String pName;       // Person's name
-    private String pAddress;    // Address of the person
-    private Date pDob;          // Date of birth
-    private String pPhone;      // Contact phone number
-    private String pGender;     // Gender
-    private String pBloodType;  // Blood type (e.g., "A+", "O-")
+    private int p_id;            // Unique ID for the person
+    private String p_name;       // Person's name
+    private String p_address;    // Address of the person
+    private Date p_dob;          // Date of birth
+    private String p_phone;      // Contact phone number
+    private String p_gender;     // Gender
+    private String p_bloodtype;  // Blood type (e.g., "A+", "O-")
 
     // No-argument constructor
     public Person() {}
 
     // Constructor with all fields
     public Person(int pId, String pName, String pAddress, Date pDob, String pPhone, String pGender, String pBloodtype) {
-        this.pId = pId;
-        this.pName = pName;
-        this.pAddress = pAddress;
-        this.pDob = pDob;
-        this.pPhone = pPhone;
-        this.pGender = pGender;
-        this.pBloodType = pBloodtype;
+        this.p_id = pId;
+        this.p_name = pName;
+        this.p_address = pAddress;
+        this.p_dob = pDob;
+        this.p_phone = pPhone;
+        this.p_gender = pGender;
+        this.p_bloodtype = pBloodtype;
     }
 
     // Getters and Setters
     public int getPId() {
-        return pId;
+        return p_id;
     }
 
     public void setPId(int pId) {
-        this.pId = pId;
+        this.p_id = pId;
     }
 
     public String getPName() {
-        return pName;
+        return p_name;
     }
 
     public void setPName(String pName) {
-        this.pName = pName;
+        this.p_name = pName;
     }
 
     public String getPAddress() {
-        return pAddress;
+        return p_address;
     }
 
     public void setPAddress(String pAddress) {
-        this.pAddress = pAddress;
+        this.p_address = pAddress;
     }
 
     public Date getPDob() {
-        return pDob;
+        return p_dob;
     }
 
     public void setPDob(Date pDob) {
-        this.pDob = pDob;
+        this.p_dob = pDob;
     }
 
     public String getPPhone() {
-        return pPhone;
+        return p_phone;
     }
 
     public void setPPhone(String pPhone) {
-        this.pPhone = pPhone;
+        this.p_phone = pPhone;
     }
 
     public String getPGender() {
-        return pGender;
+        return p_gender;
     }
 
     public void setPGender(String pGender) {
-        this.pGender = pGender;
+        this.p_gender = pGender;
     }
 
     public String getPBloodType() {
-        return pBloodType;
+        return p_bloodtype;
     }
 
-    public void setPBloodType(String pBloodType) {
-        this.pBloodType = pBloodType;
+    public void setPBloodType(String p_bloodType) {
+        this.p_bloodtype = p_bloodtype;
     }
 
     // Optional: Override toString() for easy display of Person data
     @Override
     public String toString() {
         return "Person{" +
-                "pId=" + pId +
-                ", pName='" + pName + '\'' +
-                ", pAddress='" + pAddress + '\'' +
-                ", pDob=" + pDob +
-                ", pPhone='" + pPhone + '\'' +
-                ", pGender='" + pGender + '\'' +
-                ", pBloodType='" + pBloodType + '\'' +
+                "pId=" + p_id +
+                ", pName='" + p_name + '\'' +
+                ", pAddress='" + p_address + '\'' +
+                ", pDob=" + p_dob +
+                ", pPhone='" + p_phone + '\'' +
+                ", pGender='" + p_gender + '\'' +
+                ", pBloodType='" + p_bloodtype + '\'' +
                 '}';
     }
 }
