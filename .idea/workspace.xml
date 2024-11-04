@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="64ada7f6-d939-4fea-8a4f-fd406f184888" name="Changes" comment="debugging mini session 2" />
+=======
+    <list default="true" id="64ada7f6-d939-4fea-8a4f-fd406f184888" name="Changes" comment="typo fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +52,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< Updated upstream
     &quot;JUnit.BloodBankClientTest.executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.BloodBankClientTest.testGetPersonById.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.BloodBankClientTest.testGetPersonByIdThrowsException.executor&quot;: &quot;Run&quot;,
@@ -56,6 +63,11 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+=======
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+>>>>>>> Stashed changes
   },
   &quot;keyToStringList&quot;: {
     &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
@@ -65,6 +77,7 @@
     ]
   }
 }</component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="JUnit.BloodBankClientTest">
     <configuration name="BloodBankClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bloodbank-client" />
@@ -164,6 +177,8 @@
       </list>
     </recent_temporary>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -283,10 +298,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="debugging mini session 2" />
   </component>
   <component name="XDebuggerManager">
+<<<<<<< Updated upstream
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.mockito.internal.creation.bytebuddy.MockMethodInterceptor" memberName="serializationSupport" />
       </pinned-members>
     </pin-to-top-manager>
+=======
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/keyin/bloodbankclient/BloodBankClientTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+>>>>>>> Stashed changes
   </component>
 </project>
