@@ -14,9 +14,10 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import java.net.URL;
 
 public class BloodBankClient implements BloodBankApiClient {
-    private static final String BASE_URL = "http://localhost:8080/api"; // Update with your server’s URL
+    private static final String BASE_URL = "http://localhost:8080/"; // Update with your server’s URL
 
         // Retrieves all donations
         @Override
