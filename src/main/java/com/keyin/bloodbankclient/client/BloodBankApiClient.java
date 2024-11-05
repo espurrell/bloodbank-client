@@ -14,7 +14,7 @@ public interface BloodBankApiClient {
     String getDonationsByBloodType(String bloodType) throws Exception;
     String getAvailableStock(String bloodType) throws Exception;
     Stock getStockByBloodType(String bloodType) throws Exception;
-    Person getPersonById(int pId) throws Exception;
-    Boolean createDonation(Donation donation) throws IOException;
+    Person getPersonById(int pId) throws IOException;
+    Boolean createDonation(Donation donation) throws Exception;
 }
 

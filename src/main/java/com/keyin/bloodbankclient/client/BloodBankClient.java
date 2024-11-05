@@ -15,66 +15,96 @@ import org.apache.http.client.ClientProtocolException;
 import java.io.IOException;
 
 public class BloodBankClient implements BloodBankApiClient {
-    private static final String BASE_URL = "http://localhost:8080"; // Update with your server’s URL
+    private static final String BASE_URL = "http://localhost:3306"; // Update with your server’s URL
     private final Gson gson = new Gson();
 
     // Retrieves all donations
     @Override
-    public String getAllDonations() throws IOException {
-        return sendGetRequest(BASE_URL + "/donations");
+    public String getAllDonations() {
+        try {
+            return sendGetRequest(BASE_URL + "/donations");
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving donations: " + e.getMessage(), e);
+        }
     }
 
     // Retrieves the last hospital to receive stock
     @Override
-    public String getLastHospitalToReceiveStock() throws IOException {
-        return sendGetRequest(BASE_URL + "/receive/lastHospital");
+    public String getLastHospitalToReceiveStock() {
+        try {
+            return sendGetRequest(BASE_URL + "/receive/lastHospital");
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving last hospital: " + e.getMessage(), e);
+        }
     }
 
     // Retrieves donations by person ID
     @Override
-    public String findDonationsByPersonId(int personId) throws IOException {
-        return sendGetRequest(BASE_URL + "/donations/person/" + personId);
+    public String findDonationsByPersonId(int personId) {
+        try {
+            return sendGetRequest(BASE_URL + "/donations/person/" + personId);
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving donations for person ID " + personId + ": " + e.getMessage(), e);
+        }
     }
 
     // Retrieves donation count by a specific date
     @Override
-    public String getDonationsByDate(String date) throws IOException {
-        return sendGetRequest(BASE_URL + "/donations/countByDate?date=" + date);
+    public String getDonationsByDate(String date) {
+        try {
+            return sendGetRequest(BASE_URL + "/donations/countByDate?date=" + date);
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving donations by date: " + e.getMessage(), e);
+        }
     }
 
     // Retrieves donations by blood type
     @Override
-    public String getDonationsByBloodType(String bloodType) throws IOException {
-        return sendGetRequest(BASE_URL + "/donations/countByBloodType?bloodType=" + bloodType);
+    public String getDonationsByBloodType(String bloodType) {
+        try {
+            return sendGetRequest(BASE_URL + "/donations/countByBloodType?bloodType=" + bloodType);
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving donations by blood type: " + e.getMessage(), e);
+        }
     }
 
     // Retrieves available stock for a specific blood type
     @Override
-    public String getAvailableStock(String bloodType) throws IOException {
-        return sendGetRequest(BASE_URL + "/stock/bloodType?bloodType=" + bloodType);
+    public String getAvailableStock(String bloodType) {
+        try {
+            return sendGetRequest(BASE_URL + "/stock/bloodType?bloodType=" + bloodType);
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving available stock: " + e.getMessage(), e);
+        }
     }
 
-    // Retrieves stock information by blood type (placeholder implementation)
+    // Retrieves stock information by blood type
     @Override
-    public Stock getStockByBloodType(String bloodType) throws IOException {
+    public Stock getStockByBloodType(String bloodType) {
         String response = getAvailableStock(bloodType);
         return gson.fromJson(response, Stock.class); // Assuming Stock class matches JSON structure
     }
 
-    // Retrieves person information by ID (placeholder implementation)
+    // Retrieves person information by ID
     @Override
-    public Person getPersonById(int pId) throws IOException {
-        String response = sendGetRequest(BASE_URL + "/person/" + pId);
-        return gson.fromJson(response, Person.class); // Assuming Person class matches JSON structure
+    public Person getPersonById(int pId) {
+        try {
+            String response = sendGetRequest(BASE_URL + "/person/" + pId);
+            return gson.fromJson(response, Person.class); // Assuming Person class matches JSON structure
+        } catch (IOException e) {
+            throw new RuntimeException("Error retrieving person by ID: " + e.getMessage(), e);
+        }
     }
 
     // Creates a new donation
     @Override
-    public Boolean createDonation(Donation donation) throws IOException {
+    public Boolean createDonation(Donation donation) {
         HttpPost postRequest = new HttpPost(BASE_URL + "/donations");
+
+        // Serialize the Donation object to JSON
         String json = gson.toJson(donation);
 
-        postRequest.setEntity(new StringEntity(json));
+        postRequest.setEntity(new StringEntity(json, "UTF-8"));
         postRequest.setHeader("Content-type", "application/json");
 
         try (CloseableHttpClient client = HttpClients.createDefault();
@@ -83,10 +113,17 @@ public class BloodBankClient implements BloodBankApiClient {
             if (statusCode == 201) { // Assuming 201 Created for successful POST
                 return true;
             } else {
-                throw new ClientProtocolException("Failed: HTTP error code : " + statusCode);
+                // Include the response body in the error message for more context
+                String responseBody = EntityUtils.toString(response.getEntity());
+                throw new RuntimeException("Failed: HTTP error code: " + statusCode + ", Response: " + responseBody);
             }
+        } catch (ClientProtocolException e) {
+            throw new RuntimeException("Client protocol error: " + e.getMessage(), e);
+        } catch (IOException e) {
+            throw new RuntimeException("Error creating donation: " + e.getMessage(), e);
         }
     }
+
 
     // Helper method to send an HTTP GET request and return the response as a string
     private String sendGetRequest(String endpoint) throws IOException {
@@ -95,7 +132,7 @@ public class BloodBankClient implements BloodBankApiClient {
              CloseableHttpResponse response = client.execute(request)) {
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
-                throw new IOException("Failed: HTTP error code : " + statusCode);
+                throw new RuntimeException("Failed: HTTP error code: " + statusCode);
             }
             return EntityUtils.toString(response.getEntity());
         }
