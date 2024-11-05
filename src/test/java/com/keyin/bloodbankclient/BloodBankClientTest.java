@@ -31,7 +31,7 @@ public class BloodBankClientTest {
 
     // Example test for retrieving a person by ID
     @Test
-    void testGetPersonByIdThrowsException() throws Exception {
+    void testGetPersonById() throws Exception {
         // Arrange: Mock the API client to throw an exception
         when(mockApiClient.getPersonById(1)).thenThrow(new RuntimeException("API error"));
 
@@ -77,6 +77,5 @@ public class BloodBankClientTest {
         verify(mockApiClient, times(1)).createDonation(donation);
     }
 
-    // Add more tests for other methods here
 
 }

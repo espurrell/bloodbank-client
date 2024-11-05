@@ -15,7 +15,7 @@ import org.apache.http.client.ClientProtocolException;
 import java.io.IOException;
 
 public class BloodBankClient implements BloodBankApiClient {
-    private static final String BASE_URL = "http://localhost:3306"; // Update with your server’s URL
+    private static final String BASE_URL = "http://localhost:3306";
     private final Gson gson = new Gson();
 
     // Retrieves all donations
@@ -82,7 +82,7 @@ public class BloodBankClient implements BloodBankApiClient {
     @Override
     public Stock getStockByBloodType(String bloodType) {
         String response = getAvailableStock(bloodType);
-        return gson.fromJson(response, Stock.class); // Assuming Stock class matches JSON structure
+        return gson.fromJson(response, Stock.class);
     }
 
     // Retrieves person information by ID
@@ -90,7 +90,7 @@ public class BloodBankClient implements BloodBankApiClient {
     public Person getPersonById(int pId) {
         try {
             String response = sendGetRequest(BASE_URL + "/person/" + pId);
-            return gson.fromJson(response, Person.class); // Assuming Person class matches JSON structure
+            return gson.fromJson(response, Person.class);
         } catch (IOException e) {
             throw new RuntimeException("Error retrieving person by ID: " + e.getMessage(), e);
         }
