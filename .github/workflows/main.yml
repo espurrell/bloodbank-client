@@ -23,28 +23,34 @@ jobs:
 
       # Build the API with Maven
       - name: Build API with Maven
-        run: mvn -B package --file pom.xml
         working-directory: api # adjust if the API code is in a subdirectory
+        run: mvn -B package --file pom.xml
 
       # Start the API server
       - name: Start API Server
-        run: |
-          mvn spring-boot:run -Dspring-boot.run.profiles=test &
-          sleep 20 # Wait for server to start
         working-directory: api
+        run: |
+          mvn spring-boot:run -Dspring-boot.run.profiles=test -Dserver.port=8080 &
+          sleep 20 # Wait for the server to start
 
       # Check out the client repository
       - name: Check out Client Repository
         uses: actions/checkout@v2
         with:
-          repository: user/bloodbank-client # Replace with client repo name
+          repository: user/bloodbank-client # Replace with actual client repo name
           path: client
 
       # Build and run client tests
       - name: Build and Test Client with Maven
-        run: mvn -B test
         working-directory: client
+        run: mvn -B test
 
-      # Optionally stop the server after tests
+      # Stop the API server after tests
       - name: Stop API Server
         run: pkill -f 'mvn spring-boot:run' || true
+
+      - name: Check out API Repository
+        uses: actions/checkout@v2
+        with:
+          repository: espurrell/bloodbank-api # Replace with actual API repo name
+          path: api
