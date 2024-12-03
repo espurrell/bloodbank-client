@@ -49,7 +49,7 @@ public class BloodBankClientTest {
     @Test
     void testGetStockByBloodType() throws Exception {
         // Arrange: Set up a sample stock object
-        Stock sampleStock = new Stock("O-", 10);
+        Stock sampleStock = new Stock(4L,"O-", 10);
         when(mockApiClient.getStockByBloodType("O-")).thenReturn(sampleStock);
 
         // Act

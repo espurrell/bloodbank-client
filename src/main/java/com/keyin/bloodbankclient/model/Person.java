@@ -1,100 +1,99 @@
 package com.keyin.bloodbankclient.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Person {
 
-    private int p_id;            // Unique ID for the person
-    private String p_name;       // Person's name
-    private String p_address;    // Address of the person
-    private Date p_dob;          // Date of birth
-    private String p_phone;      // Contact phone number
-    private String p_gender;     // Gender
-    private String p_bloodtype;  // Blood type (e.g., "A+", "O-")
+    private int id;               // Unique ID for the person
+    private String name;          // Person's name
+    private String address;       // Address of the person
+    private LocalDate dob;        // Date of birth (Changed from Date to LocalDate)
+    private String phone;         // Contact phone number
+    private String gender;        // Gender
+    private String bloodType;     // Blood type (e.g., "A+", "O-")
 
     // No-argument constructor
     public Person() {}
 
     // Constructor with all fields
-    public Person(int pId, String pName, String pAddress, Date pDob, String pPhone, String pGender, String pBloodtype) {
-        this.p_id = pId;
-        this.p_name = pName;
-        this.p_address = pAddress;
-        this.p_dob = pDob;
-        this.p_phone = pPhone;
-        this.p_gender = pGender;
-        this.p_bloodtype = pBloodtype;
+    public Person(int id, String name, String address, LocalDate dob, String phone, String gender, String bloodType) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.dob = dob;
+        this.phone = phone;
+        this.gender = gender;
+        this.bloodType = bloodType;
     }
 
     // Getters and Setters
-    public int getPId() {
-        return p_id;
+    public int getId() {
+        return id;
     }
 
-    public void setPId(int pId) {
-        this.p_id = pId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getPName() {
-        return p_name;
+    public String getName() {
+        return name;
     }
 
-    public void setPName(String pName) {
-        this.p_name = pName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPAddress() {
-        return p_address;
+    public String getAddress() {
+        return address;
     }
 
-    public void setPAddress(String pAddress) {
-        this.p_address = pAddress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public Date getPDob() {
-        return p_dob;
+    public LocalDate getDob() {
+        return dob;
     }
 
-    public void setPDob(Date pDob) {
-        this.p_dob = pDob;
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
     }
 
-    public String getPPhone() {
-        return p_phone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPPhone(String pPhone) {
-        this.p_phone = pPhone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getPGender() {
-        return p_gender;
+    public String getGender() {
+        return gender;
     }
 
-    public void setPGender(String pGender) {
-        this.p_gender = pGender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getPBloodType() {
-        return p_bloodtype;
+    public String getBloodType() {
+        return bloodType;
     }
 
-    public void setPBloodType(String p_bloodType) {
-        this.p_bloodtype = p_bloodtype;
+    public void setBloodType(String bloodType) {
+        this.bloodType = bloodType;
     }
 
     // Optional: Override toString() for easy display of Person data
     @Override
     public String toString() {
         return "Person{" +
-                "pId=" + p_id +
-                ", pName='" + p_name + '\'' +
-                ", pAddress='" + p_address + '\'' +
-                ", pDob=" + p_dob +
-                ", pPhone='" + p_phone + '\'' +
-                ", pGender='" + p_gender + '\'' +
-                ", pBloodType='" + p_bloodtype + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", dob=" + dob +
+                ", phone='" + phone + '\'' +
+                ", gender='" + gender + '\'' +
+                ", bloodType='" + bloodType + '\'' +
                 '}';
     }
 }
-
