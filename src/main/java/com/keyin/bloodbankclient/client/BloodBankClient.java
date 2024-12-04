@@ -15,7 +15,7 @@ import org.apache.http.client.ClientProtocolException;
 import java.io.IOException;
 
 public class BloodBankClient implements BloodBankApiClient {
-    private static final String BASE_URL = "http://localhost:3306";
+    private static final String BASE_URL = "http://localhost:8080";
     private final Gson gson = new Gson();
 
     // Retrieves all donations
